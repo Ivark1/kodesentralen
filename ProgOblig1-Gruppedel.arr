@@ -13,6 +13,8 @@ pin = circle(10, "solid", "black")
 
 # "Underlay" blir brukt for å legge formene over hverandre, men ettersom "underlay" funksjonen bare kan bruke opp til 2 argumenter, så må den brukes mange ganger i seg selv. "Underlay-xy" blir brukt for å endre posisjonen til pinnene og sirklene og bruker 3 argumenter.
 
+# Selv om det var tungvint så ble det funnet ut at underlay var det beste alternativet. Det ble gjort forsøk med "put-image" og "overlay" også, men begge disse hadde sine egne problemer. En komplikasjon som oppsto var på grunn av selve språket fordi mengden argumenter man kunne bruke var svært begrenset. "Overlay" fikk problemer med at hvis man flyttet en så ble alle andre elementer også flyttet og "put-image", som vi startet med, hadde problemer med mengden argumenter vi hadde tilgjengelig. Problemet med "put-image" kan også være fordi det var den vi startet med da vi ikke helt skjønte hvordan vi skulle bruke språket.
+
 underlay((allignment), 
   underlay((circle1), 
     underlay((circle2), 
