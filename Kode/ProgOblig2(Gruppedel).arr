@@ -3,6 +3,7 @@ use context essentials2021
 #-----------------------------------------------------------------------
 #Her er alle variablene og formene i koden
 
+# Lager sirklene og posisjons variablene til sirklene
 circle1 = circle(50, "solid", "purple")
 var posc1 = 1
 circle2 = circle(40, "solid", "red")
@@ -12,19 +13,17 @@ var posc3 = 1
 circle4 = circle(20, "solid", "yellow")
 var posc4 = 1
 
-var curpin = 1
-var minsize = 1
-
+# Her lages variablene som ser om noe er ugyldig, hva som skal printes ut om dette er tilfellet og hva som skal printes ut om du har vunnet
 var valid = true
 var win = "gratulerer, du har vunnet spillet!!"
-
 var invalid1 = "Ugyldig trekk, sørg for at du flytter den minste først" 
 var invalid2 = "og at du ikke plasserer en større sirkel over den"
 
+# Her skapes de svarte pinnene
 pin = circle(10, "solid", "black")
 
 #-------------
-
+# Her skapes justerings feltene. Disse er ikke synlig, men de holder sirklene og pinnene på riktig plass igjennom spillet.
 pin-align   = rectangle(400, 100, "solid", "transparent")
 mainstage1  = rectangle(480, 100, "solid", "transparent")
 mainstage2  = rectangle(460, 100, "solid", "transparent")
@@ -34,7 +33,7 @@ mainstage4  = rectangle(420, 100, "solid", "transparent")
 mainstage = rectangle(520, 200, "solid", "transparent")
 
 #-----------------------------------------------------------------------
-#Her lages pinnene og blir puttet på brettet
+#Her lages pinnene og blir puttet på brettet. Her er det også en if-statement som tas i bruk da funksjonen brukes senere i koden
 
 fun pins(choice):
   
@@ -60,7 +59,7 @@ end
 
 
 #-----------------------------------------------------------------------
-#Dette er funksjonene til det som skal beveges. Her settes sirklene på brettet der de blir justert til riktig posisjon
+#Dette er funksjonene til det som skal beveges. Her settes sirklene på brettet der de blir justert til riktig posisjon. Hver "pawn" er sin egen sirkel. pawn1 er den største og pawn4 er den minste
 
 
 fun pawn1(pawn):
@@ -117,7 +116,7 @@ fun pawn4(pawn):
   end 
 end
 #-----------------------------------------------------------------------
-#Her settes både sirklene og pinnene opp
+#Her settes både sirklene og pinnene opp. Her brukes pins() funksjonen som ble nevnt tidligere og det som står inne i pins() funkksjonen er hvilken av blokkene i if-statementen som tas i bruk
 
 
 fun if1():
@@ -201,9 +200,10 @@ end
 #-----------------------------------------------------------------------
 #Her er funksjonene til selve spillet
 
+# Denne funksjonen ser både etter om spillet er vunnet og viser selve spillet på skjermen
 fun show():
   block:
-    if ((posc1 == 1) and (posc2 == 1) and (posc3 == 1) and (posc4 == 3)):
+    if ((posc1 == 3) and (posc2 == 3) and (posc3 == 3) and (posc4 == 3)):
       block:
         print(win)
         underlay((if1()),   
@@ -220,6 +220,7 @@ fun show():
   end 
 end
 
+# Denne funksjonen setter spillet tilbake til startposisjon uten instruksene på toppen
 fun reset():
   block:
     posc1 := 1
@@ -233,6 +234,7 @@ fun reset():
   end
 end
 
+# Denne funksjonen starter selve spillet og blir automatisk brukt på starten av spillet, men den kan brukes igjen for å starte på nytt med instruksene på toppen
 fun start(): 
   block:
     print("skriv move(sirkel, pinne) for å gjøre ett trekk") 
@@ -251,6 +253,7 @@ fun start():
   end
 end
   
+# Denne funksjonen brukes til å kontrollere hvor sirklene skal bevege seg og virker også som en sjekk på om trekket du gjør er gyldig
 fun move(pawn, slot):
   block:
   if pawn == 4:
