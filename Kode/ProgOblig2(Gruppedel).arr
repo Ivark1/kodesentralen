@@ -16,6 +16,7 @@ var curpin = 1
 var minsize = 1
 
 var valid = true
+var win = "gratulerer, du har vunnet spillet!!"
 
 var invalid1 = "Ugyldig trekk, sørg for at du flytter den minste først" 
 var invalid2 = "og at du ikke plasserer en større sirkel over den"
@@ -201,9 +202,22 @@ end
 #Her er funksjonene til selve spillet
 
 fun show():
-  underlay((if1()), 
-    underlay((if2()), 
-      underlay((if3()), ((if4())))))
+  block:
+    if ((posc1 == 1) and (posc2 == 1) and (posc3 == 1) and (posc4 == 3)):
+      block:
+        print(win)
+        underlay((if1()),   
+          underlay((if2()),   
+            underlay((if3()), ((if4())))))
+      end
+    else: 
+      block: 
+        underlay((if1()),   
+          underlay((if2()),   
+            underlay((if3()), ((if4())))))
+      end
+    end
+  end 
 end
 
 fun reset():
@@ -246,7 +260,7 @@ fun move(pawn, slot):
       else:
         block:
           posc1 := slot
-          show()
+            # error()
         end
       end
     end
@@ -258,7 +272,7 @@ fun move(pawn, slot):
       else:
         block:
           posc2 := slot
-          show()
+            # error()
         end
       end
     end 
@@ -270,7 +284,7 @@ fun move(pawn, slot):
       else:
         block:
           posc3 := slot
-          show()
+            # error()
         end
       end
     end
@@ -279,30 +293,24 @@ fun move(pawn, slot):
     block:
       block: 
         posc4 := slot 
-        show() 
+          # error()
       end
     end
     else: 
       valid := false
   end
-    vic()
+    error()
   end
 end
 
 #-----------------------------------------------------------------------
 #Sjekker om spillet er ferdig eller om et ugyldig trekk har blitt gjort
 
-fun vic():
-  if ((posc1 == 3) and (posc2 == 3) and (posc3 == 3) and (posc4 == 3)):
-      "gratulerer, du har vunnet spillet!!" 
-  else:
-      error() 
-  end
-end
+
 
 fun error():
   if valid == false:
-    block: 
+    block:
       print(invalid1) 
       print(invalid2)
       valid := true 
