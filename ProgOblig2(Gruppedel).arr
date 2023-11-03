@@ -203,7 +203,7 @@ end
 
 fun show():
   block:
-    if ((posc1 == 1) and (posc2 == 1) and (posc3 == 1) and (posc4 == 3)):
+    if ((posc1 == 3) and (posc2 == 3) and (posc3 == 3) and (posc4 == 3)):
       block:
         print(win)
         underlay((if1()),   
