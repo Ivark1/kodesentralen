@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carl</title>
     <link rel="stylesheet" href="css/StyleMain.css">
+    <!-- Finner filen figures.js og kjører den -->
+    <script src="js/figures.js" defer></script>
     
     <!-- Lager en style som gjør at siden får en bakgrunnsfarge og at headeren får en annen farge -->
     <style> 
@@ -31,19 +33,36 @@
     </div>
 
     <!-- Lager et canvas element med id brett -->
-    <canvas id="brett" width="1400" height="1400"></canvas>
+    <canvas id="brett" width="1400" height="500"></canvas>
 
-    <!-- Finner filen figures.js og kjører den -->
-    <script src="js/figures.js" defer></script>
+    <!-- Lager et SVG element -->
+    <svg id="svgCanvas" width="1400" height="500"></svg>
+
     <script>
         //Venter på at siden laster inn før den kjører koden
         window.onload = function () {
             const ctx = initCanvas('brett'); // Initialiserer canvaset
-            drawCircleOfCircles(ctx, 310, 310, 10, 60, 'red'); // Tegner en sirkel av sirkler, med senter i (310, 310), radius 10, 60 sirkler og farge rød
-            drawCircleOfCircles(ctx, 320, 320, 10, 40, 'yellow'); // Tegner en sirkel av sirkler
-            drawRect(ctx, 290, 290, 100, 100, 'outline', 'blue'); // Tegner en firkant, med senter i (290, 290), bredde 100, høyde 100, farge blå
-            drawRect(ctx, 285, 285, 110, 110, 'outline', 'blue'); // Tegner en firkant
-            drawRect(ctx, 280, 280, 120, 120, 'outline', 'blue'); // Tegner en firkant
+            drawCircleOfCircles(ctx, 275, 310, 10, 60, 'red'); // Tegner en sirkel av sirkler, med senter i (310, 310), radius 10, 60 sirkler og farge rød
+            drawCircleOfCircles(ctx, 285, 320, 10, 40, 'yellow'); // Tegner en sirkel av sirkler
+            drawRect(ctx, 255, 290, 100, 100, 'outline', 'blue'); // Tegner en firkant, med senter i (290, 290), bredde 100, høyde 100, farge blå
+            drawRect(ctx, 250, 285, 110, 110, 'outline', 'blue'); // Tegner en firkant
+            drawRect(ctx, 245, 280, 120, 120, 'outline', 'blue'); // Tegner en firkant
+
+            const svgCanvas = document.getElementById('svgCanvas');
+
+            // Draw using SVG functions
+            const circleOfCirclesSVG = createCircleOfCirclesSVG(310, 310, 10, 50, 'red');
+            const circleOfCircles2SVG = createCircleOfCirclesSVG(310, 310, 10, 35, 'yellow');
+            const rectSVG = createRectSVG(260, 260, 100, 100, 'outline', 'blue');
+            const rect2SVG = createRectSVG(255, 255, 110, 110, 'outline', 'blue');
+            const rect3SVG = createRectSVG(250, 250, 120, 120, 'outline', 'blue');
+
+            // Append the SVG elements to the SVG canvas
+            svgCanvas.appendChild(circleOfCirclesSVG);
+            svgCanvas.appendChild(circleOfCircles2SVG);
+            svgCanvas.appendChild(rectSVG);
+            svgCanvas.appendChild(rect2SVG);
+            svgCanvas.appendChild(rect3SVG);
         }
     </script>
 </body>
