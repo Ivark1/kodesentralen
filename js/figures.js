@@ -53,10 +53,10 @@ function drawCircleOfCircles(ctx, centerX, centerY, numCircles, circleRadius, ci
 }
 
 // Eksempel på bruk av funksjonene
-const circleOfCirclesCenterX = 150;
-const circleOfCirclesCenterY = 150;
-const numCirclesInCircle = 12;
-const circleRadius = 20;
-const circleColor = '#FFB266';
+//const circleOfCirclesCenterX = 150;
+//const circleOfCirclesCenterY = 150;
+//const numCirclesInCircle = 12;
+//const circleRadius = 20;
+//const circleColor = '#FFB266';
 
-drawCircleOfCircles(ctx, circleOfCirclesCenterX, circleOfCirclesCenterY, numCirclesInCircle, circleRadius, circleColor);
+//drawCircleOfCircles(ctx, circleOfCirclesCenterX, circleOfCirclesCenterY, numCirclesInCircle, circleRadius, circleColor);
