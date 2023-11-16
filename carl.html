@@ -1,34 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">  <title>Carl</title>
-<link rel="stylesheet" href="css/StyleMain.css">
-<style>
-    .container {
-        background: linear-gradient(to bottom, #3f98f1, #f7f7f7);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl</title>
+    <link rel="stylesheet" href="css/StyleMain.css">
     
-    header {
-        color: #ffffff;
-        text-align: center;
-        padding: 70px;
-    }
-</style>    
+    <!-- Lager en style som gjør at siden får en bakgrunnsfarge og at headeren får en annen farge -->
+    <style> 
+        .container {
+            background: linear-gradient(to bottom, #3f98f1, #f7f7f7);
+        }
+        
+        header {
+            color: #ffffff;
+            text-align: center;
+            padding: 70px;
+        }
+    </style>    
 </head>
-
-
 <body>
-
+    <!-- Lager en container (div) som inneholder en header og en knapp -->
     <div class="container">
         <header>
-            <h1>Carl</h1>
+            <h1>Carl</h1> 
+            <!-- Lager en knapp som tar deg tilbake til hovedsiden -->
             <a href="index.html" class="button">Tilbake til hovedside</a>
         </header>
         <h1>Test h1</h1>
-        <p>Test p</p>
     </div>
 
-</body>
+    <!-- Lager et canvas element med id brett -->
+    <canvas id="brett" width="1400" height="1400"></canvas>
 
+    <!-- Finner filen figures.js og kjører den -->
+    <script src="js/figures.js" defer></script>
+    <script>
+        <!-- Venter på at siden laster inn før den kjører koden -->
+        window.onload = function () {
+            const ctx = initCanvas('canvasExample'); // Initialiserer canvas
+            drawCircle(ctx, 130, 130, 60, 'solid', '#FF6666'); // Tegner en sirkel
+            drawCircleOfCircles(ctx, 300, 300, 10, 80, 'red'); // Tegner en sirkel av sirkler
+            drawRect(ctx, 350, 350, 100, 100, 'outline', 'blue'); // Tegner en firkant
+        }
+    </script>
+</body>
 </html>
