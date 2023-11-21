@@ -45,21 +45,21 @@
         window.onload = function () {
             const ctx = initCanvas('brett'); // Initialiserer canvaset
             rectangle(ctx, 255, 290, 200, 200, 'solid', 'black')
-            circle(ctx, 255, 340, 100, 'solid', 'blue');
-            circle(ctx, 300, 290, 100, 'solid', 'red');
-            circle(ctx, 355, 340, 100, 'solid', 'yellow');
-            circle(ctx, 300, 390, 100, 'solid', 'green');
-            circle(ctx, 340, 380, 20, 'solid', 'black');
+            circle(ctx, 280, 340, 100, 'solid', 'blue');
+            circle(ctx, 325, 290, 100, 'solid', 'red');
+            circle(ctx, 380, 340, 100, 'solid', 'yellow');
+            circle(ctx, 325, 390, 100, 'solid', 'green');
+            circle(ctx, 365, 380, 20, 'solid', 'black');
 
             const svgCanvas = document.getElementById('svgCanvas');
 
             // Draw using SVG functions
-            const rectSVG = rectangleSVG(260, 50, 200, 200, 'solid', 'black');
-            const circle5SVG = circleSVG(310, 150, 50, 100, 'blue');
-            const circle1SVG = circleSVG(360, 100, 50, 100, 'red');
-            const circle2SVG = circleSVG(410, 150, 50, 100, 'yellow');
-            const circle3SVG = circleSVG(360, 200, 50, 100, 'green');
-            const circle4SVG = circleSVG(360, 150, 10, 100, 'black');
+            const rectSVG = rectangleSVG(285, 50, 200, 200, 'solid', 'black');
+            const circle5SVG = circleSVG(335, 150, 50, 100, 'blue');
+            const circle1SVG = circleSVG(385, 100, 50, 100, 'red');
+            const circle2SVG = circleSVG(435, 150, 50, 100, 'yellow');
+            const circle3SVG = circleSVG(385, 200, 50, 100, 'green');
+            const circle4SVG = circleSVG(385, 150, 10, 100, 'black');
 
             // Append the SVG elements to the SVG canvas
             svgCanvas.appendChild(rectSVG);
