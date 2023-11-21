@@ -1,34 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">  <title>Ivar</title>
-<link rel="stylesheet" href="css/StyleMain.css">
-<style>
-    .container {
-        background: linear-gradient(to bottom, #3f98f1, #f7f7f7);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl</title>
+    <link rel="stylesheet" href="css/StyleMain.css">
+    <!-- Finner filen figures.js og kjører den -->
+    <script src="js/figures.js" defer></script>
     
-    header {
-        color: #ffffff;
-        text-align: center;
-        padding: 70px;
-    }
-</style>    
+    <!-- Lager en style som gjør at siden får en bakgrunnsfarge og at headeren får en annen farge -->
+    <style> 
+        .container {
+            background: linear-gradient(to bottom, #3f98f1, #f7f7f7);
+        }
+        
+        header {
+            color: #ffffff;
+            text-align: center;
+            padding: 70px;
+        }
+    </style>    
 </head>
-
-
 <body>
-
+    <!-- Lager en container (div) som inneholder en header og en knapp -->
     <div class="container">
         <header>
-            <h1>Ivar</h1>
+            <h1>Ivar</h1> 
+            <!-- Lager en knapp som tar deg tilbake til hovedsiden -->
             <a href="index.html" class="button">Tilbake til hovedside</a>
         </header>
-        <h1>Test h1</h1>
-        <p>Test p</p>
+        <h1>Carl Arnegard</h1>
+
+        <div style="position: relative;">
+            <img src="images/figurPyretCA.png" style="position: absolute; left: 60px; top: 120px;"/>
+        </div>
     </div>
 
-</body>
+    <!-- Lager et canvas element med id brett -->
+    <canvas id="brett" width="1400" height="650"></canvas>
 
+    <!-- Lager et SVG element med id svgBrett -->
+    <svg id="svgBrett" width="1400" height="300"></svg>
+
+    <script>
+        //Venter på at siden laster inn før den kjører koden
+        window.onload = function () {
+            const ctx = initCanvas('brett'); // Initialiserer canvaset
+            drawCircleOfCircles(ctx, 275, 450, 10, 60, 'red'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
+            drawCircleOfCircles(ctx, 285, 460, 10, 40, 'yellow'); // Tegner en sirkel av sirkler
+            drawRect(ctx, 255, 430, 100, 100, 'outline', 'blue'); // Tegner en firkant, med bredde 100, høyde 100, blå farge
+            drawRect(ctx, 250, 425, 110, 110, 'outline', 'blue'); // Tegner en firkant
+            drawRect(ctx, 245, 420, 120, 120, 'outline', 'blue'); // Tegner en firkant
+
+            const svgCanvas = document.getElementById('svgBrett');
+
+            // Draw using SVG functions
+            const circleOfCirclesSVG = createCircleOfCirclesSVG(310, 110, 10, 50, 'red');
+            const circleOfCircles2SVG = createCircleOfCirclesSVG(310, 110, 10, 35, 'yellow');
+            const rectSVG = createRectSVG(260, 60, 100, 100, 'outline', 'blue');
+            const rect2SVG = createRectSVG(255, 55, 110, 110, 'outline', 'blue');
+            const rect3SVG = createRectSVG(250, 50, 120, 120, 'outline', 'blue');
+
+            // Append the SVG elements to the SVG canvas
+            svgCanvas.appendChild(circleOfCirclesSVG);
+            svgCanvas.appendChild(circleOfCircles2SVG);
+            svgCanvas.appendChild(rectSVG);
+            svgCanvas.appendChild(rect2SVG);
+            svgCanvas.appendChild(rect3SVG);
+        }
+    </script>
+</body>
 </html>
