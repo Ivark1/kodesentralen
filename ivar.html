@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carl</title>
+    <title>Ivar</title>
     <link rel="stylesheet" href="css/StyleMain.css">
     <!-- Finner filen figures.js og kjører den -->
     <script src="js/figures.js" defer></script>
@@ -29,11 +29,15 @@
             <!-- Lager en knapp som tar deg tilbake til hovedsiden -->
             <a href="index.html" class="button">Tilbake til hovedside</a>
         </header>
-        <h1>Carl Arnegard</h1>
+        <h1>Ivar Kaldheim (31år)</h1>
+        <p>Student ved Universitetet i Agder, 1. år bachelor i IT og informasjonssystemer</p>
+        <br><br>
+        <p>ivark@uia.no</p>
 
         <div style="position: relative;">
-            <img src="images/figurPyretCA.png" style="position: absolute; left: 60px; top: 120px;"/>
+            <img src="images/figurPyretIK.png" style="position: absolute; left: 60px; top: 120px;"/>
         </div>
+
     </div>
 
     <!-- Lager et canvas element med id brett -->
@@ -46,24 +50,24 @@
         //Venter på at siden laster inn før den kjører koden
         window.onload = function () {
             const ctx = initCanvas('brett'); // Initialiserer canvaset
-            drawCircleOfCircles(ctx, 275, 450, 10, 60, 'red'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
-            drawCircleOfCircles(ctx, 285, 460, 10, 40, 'yellow'); // Tegner en sirkel av sirkler
-            drawRect(ctx, 255, 430, 100, 100, 'outline', 'blue'); // Tegner en firkant, med bredde 100, høyde 100, blå farge
-            drawRect(ctx, 250, 425, 110, 110, 'outline', 'blue'); // Tegner en firkant
-            drawRect(ctx, 245, 420, 120, 120, 'outline', 'blue'); // Tegner en firkant
+            rectangle(ctx, 200, 400, 350, 200,  'solid', 'black'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
+            rectangle(ctx, 250, 400, 240, 200, 'solid', 'blue'); // Tegner en sirkel av sirkler
+            rectangle(ctx, 250, 450, 240, 100, 'solid', 'red')
+            circle(ctx, 320, 450, 100, 'solid', 'green')
+
 
             const svgCanvas = document.getElementById('svgBrett');
 
             // Draw using SVG functions
-            const circleOfCirclesSVG = createCircleOfCirclesSVG(310, 110, 10, 50, 'red');
-            const circleOfCircles2SVG = createCircleOfCirclesSVG(310, 110, 10, 35, 'yellow');
-            const rectSVG = createRectSVG(260, 60, 100, 100, 'outline', 'blue');
-            const rect2SVG = createRectSVG(255, 55, 110, 110, 'outline', 'blue');
-            const rect3SVG = createRectSVG(250, 50, 120, 120, 'outline', 'blue');
+            const rect1SVG = rectangleSVG(235, 375, 350, 60, 'solid','black');
+            const cf2SVG = circlefigureSVG(310, 110, 10, 35, 'yellow');
+            const rectSVG = rectangleSVG(260, 60, 100, 100, 'outline', 'blue');
+            const rect2SVG = rectangleSVG(255, 55, 110, 110, 'outline', 'blue');
+            const rect3SVG = rectangleSVG(250, 50, 120, 120, 'outline', 'blue');
 
             // Append the SVG elements to the SVG canvas
-            svgCanvas.appendChild(circleOfCirclesSVG);
-            svgCanvas.appendChild(circleOfCircles2SVG);
+            svgCanvas.appendChild(rect1SVG);
+            svgCanvas.appendChild(cf2SVG);
             svgCanvas.appendChild(rectSVG);
             svgCanvas.appendChild(rect2SVG);
             svgCanvas.appendChild(rect3SVG);
