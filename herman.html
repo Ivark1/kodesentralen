@@ -36,36 +36,40 @@
     </div>
     
     <!-- Lager et canvas element med id brett -->
-    <canvas id="brett" width="1400" height="650"></canvas>
+    <canvas id="brett" width="1400" height="500"></canvas>
 
-    <!-- Lager et SVG element med id svgBrett -->
-    <svg id="svgBrett" width="1400" height="300"></svg>
+    <!-- Lager et SVG element -->
+    <svg id="svgCanvas" width="1400" height="500"></svg>
 
     <script>
         //Venter på at siden laster inn før den kjører koden
         window.onload = function () {
             const ctx = initCanvas('brett'); // Initialiserer canvaset
-            circlefigure(ctx, 275, 450, 10, 60, 'red'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
-            circlefigure(ctx, 285, 460, 10, 40, 'yellow'); // Tegner en sirkel av sirkler
-            rectangle(ctx, 255, 430, 100, 100, 'outline', 'blue'); // Tegner en firkant, med bredde 100, høyde 100, blå farge
-            rectangle(ctx, 250, 425, 110, 110, 'outline', 'blue'); // Tegner en firkant
-            rectangle(ctx, 245, 420, 120, 120, 'outline', 'blue'); // Tegner en firkant
+            
+            rectangle(ctx, 255, 290, 200, 200, 'solid', 'black')
+            circle(ctx, 255, 340, 100, 'solid', 'blue');
+            circle(ctx, 300, 290, 100, 'solid', 'red');
+            circle(ctx, 355, 340, 100, 'solid', 'yellow');
+            circle(ctx, 300, 390, 100, 'solid', 'green');
+            circle(ctx, 340, 380, 20, 'solid', 'black');
 
-            const svgCanvas = document.getElementById('svgBrett');
+            const svgCanvas = document.getElementById('svgCanvas');
 
             // Draw using SVG functions
-            const cfSVG = circlefigureSVG(310, 110, 10, 50, 'red');
-            const cf2SVG = circlefigureSVG(310, 110, 10, 35, 'yellow');
-            const rectSVG = rectangleSVG(260, 60, 100, 100, 'outline', 'blue');
-            const rect2SVG = rectangleSVG(255, 55, 110, 110, 'outline', 'blue');
-            const rect3SVG = rectangleSVG(250, 50, 120, 120, 'outline', 'blue');
+            const rectSVG = rectangleSVG(260, 50, 200, 200, 'solid', 'black');
+            const circle5SVG = circleSVG(310, 150, 50, 100, 'blue');
+            const circle1SVG = circleSVG(360, 100, 50, 100, 'red');
+            const circle2SVG = circleSVG(410, 150, 50, 100, 'yellow');
+            const circle3SVG = circleSVG(360, 200, 50, 100, 'green');
+            const circle4SVG = circleSVG(360, 150, 10, 100, 'black');
 
             // Append the SVG elements to the SVG canvas
-            svgCanvas.appendChild(cfSVG);
-            svgCanvas.appendChild(cf2SVG);
             svgCanvas.appendChild(rectSVG);
-            svgCanvas.appendChild(rect2SVG);
-            svgCanvas.appendChild(rect3SVG);
+            svgCanvas.appendChild(circle5SVG);
+            svgCanvas.appendChild(circle1SVG);
+            svgCanvas.appendChild(circle2SVG);
+            svgCanvas.appendChild(circle3SVG);
+            svgCanvas.appendChild(circle4SVG);
         }
     </script>
 </body>
