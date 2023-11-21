@@ -45,22 +45,25 @@
 	//Venter på at siden laster inn før den kjører koden
         window.onload = function () {
         	const ctx = initCanvas('brett'); // Initialiserer canvaset
-		rectangle(ctx, 50, 50, 170, 100, 'solid', 'green'); // Tegner et blått rektangel
-        	rectangle(ctx, 50, 50, 170, 30, 'solid', 'red'); // Tegner et grønt rektangel
-		rectangle(ctx, 50, 50, 170, 30, 'solid', 'blue'); // Tegner et grønt rektangel
+		rectangle(ctx, 100, 100, 100, 100, 'solid', 'black'); // Tegner et blått rektangel
+        	rectangle(ctx, 50, 50, 50, 50, 'solid', 'green'); // Tegner et grønt rektangel
+		rectangle(ctx, 50, 50, 50, 50, 'solid', 'red'); // Tegner et grønt rektangel
+		rectangle(ctx, 50, 50, 50, 50, 'solid', 'blue'); // Tegner et grønt rektangel
 			
             	const svgCanvas = document.getElementById('svgBrett');
 			
             	// Draw using SVG functions
-            	const rSVG = rectangleSVG(50, 50, 170, 100, 'solid', 'green'); // Tegner et blått rektangel 
-            	const r2SVG = rectangleSVG(50, 50, 170, 100, 'solid', 'red'); // Tegner et blått rektangel 
-            	const r3SVG = rectangleSVG(50, 50, 170, 30, 'solid', 'blue'); // Tegner et grønt rektangel
+            	const rSVG = rectangleSVG(100, 100, 100, 100, 'solid', 'black');
+            	const r2SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'green');
+            	const r3SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'red');
+		const r4SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'blue');
         
 		
 		// Append the SVG elements to the SVG canvas
             	svgCanvas.appendChild(rSVG);
             	svgCanvas.appendChild(r2SVG);
 		svgCanvas.appendChild(r3SVG);
+		vgCanvas.appendChild(r4SVG);
         }
    </script>
 </body>
