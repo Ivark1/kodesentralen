@@ -22,7 +22,7 @@ function drawCircle(context, x, y, size, fillMode, color) {
         context.arc(x + radius, y + radius, radius, 0, 2 * Math.PI);
         context.stroke();
     } else {
-        console.error('Invalid fill mode. Use "solid" or "outline".');
+        console.error('Ugyldig input. Bruk "solid" eller "outline".');
     }
 }
 
@@ -34,7 +34,7 @@ function drawRect(context, x, y, width, height, fillMode, color) {
     } else if (fillMode === 'outline') {
         context.strokeRect(x, y, width, height);
     } else {
-        console.error('Invalid fill mode. Use "solid" or "outline".');
+        console.error('Ugyldig input. Bruk "solid" eller "outline".');
     }
 }
 
@@ -53,18 +53,6 @@ function drawCircleOfCircles(ctx, centerX, centerY, numCircles, circleRadius, ci
 }
 
 
-/*
-Eksempel på bruk av funksjonene
-const circleOfCirclesCenterX = 150;
-const circleOfCirclesCenterY = 150;
-const numCirclesInCircle = 12;
-const circleRadius = 20;
-const circleColor = '#FFB266';
-
-drawCircleOfCircles(ctx, circleOfCirclesCenterX, circleOfCirclesCenterY, numCirclesInCircle, circleRadius, circleColor);*/
-
-// SVG
-
 function createCircleSVG(x, y, radius, fillMode, color) {
     const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     circle.setAttribute('cx', x);
@@ -77,20 +65,19 @@ function createCircleSVG(x, y, radius, fillMode, color) {
         circle.setAttribute('stroke-width', '2');
         circle.setAttribute('fill', 'none');
     }
-
     return circle;
 }
 
 // fuksjon for å lage en firkant
 function createRectSVG(x, y, width, height, fillMode, color) {
-    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    rect.setAttribute('x', x);
-    rect.setAttribute('y', y);
-    rect.setAttribute('width', width);
-    rect.setAttribute('height', height);
-    rect.setAttribute('fill', color);
+    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect'); // lager elementet før man putter på atributes
+    rect.setAttribute('x', x); // setter hvor på x aksen rektanglet skal være
+    rect.setAttribute('y', y); // setter hvor på y aksen rektanglet skal være
+    rect.setAttribute('width', width); //setter hvor bred rektanglet skal være
+    rect.setAttribute('height', height); // setter hvor høy rektanglet skal være
+    rect.setAttribute('fill', color); // lager rektanglet med en farge
 
-    if (fillMode === 'outline') {
+    if (fillMode === 'outline') { // dette tilfellet gjør at bare kanten på rektanglet blir tegnet
         rect.setAttribute('stroke', color);
         rect.setAttribute('stroke-width', '2');
         rect.setAttribute('fill', 'none');
@@ -103,12 +90,12 @@ function createRectSVG(x, y, width, height, fillMode, color) {
 function createCircleOfCirclesSVG(centerX, centerY, numCircles, circleRadius, circleColor) {
     const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
-    const angleIncrement = (2 * Math.PI) / numCircles;
+    const angleIncrement = (2 * Math.PI) / numCircles; // setter hvor stort hoppet mellom hver av sirklene er
 
-    for (let i = 0; i < numCircles; i++) {
-        const angle = i * angleIncrement;
-        const x = centerX + circleRadius * Math.cos(angle);
-        const y = centerY + circleRadius * Math.sin(angle);
+    for (let i = 0; i < numCircles; i++) { // teller hvor mange sirkler som har blitt laget og sjekker om det er likt som målet eller ikke
+        const angle = i * angleIncrement; // lager en ny sirkel hvis målet ikke er nådd
+        const x = centerX + circleRadius * Math.cos(angle); // finner ut hvor på x aksen den neste sirklen skla plasseres og plasserer den
+        const y = centerY + circleRadius * Math.sin(angle); // finner ut hvor på x aksen den neste sirklen skla plasseres og plasserer den
 
         const circle = createCircleSVG(x, y, circleRadius, 'solid', circleColor);
         group.appendChild(circle);
@@ -116,21 +103,3 @@ function createCircleOfCirclesSVG(centerX, centerY, numCircles, circleRadius, ci
 
     return group;
 }
-
-/*
-// Example usage:
-const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-document.body.appendChild(svg); // legger svg-elementet til i body
-
-// tegner en sirkel
-const circle = createCircleSVG(50, 50, 30, 'solid', 'blue');
-svg.appendChild(circle);
-
-// tegner en firkant
-const rect = createRectSVG(100, 50, 50, 30, 'outline', 'green');
-svg.appendChild(rect);
-
-// tegner en gruppe med sirkler som danner en sirkel
-const circleOfCircles = createCircleOfCirclesSVG(200, 50, 8, 20, 'red');
-svg.appendChild(circleOfCircles);
-*/

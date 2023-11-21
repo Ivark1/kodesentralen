@@ -13,9 +13,9 @@ body {
 
 header {
     color: #ecf0f1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /*gjør at elementene på skjermen justerer seg på egenhånd hvis verdier blir endret eller hvis vinduet blir mindre*/
+    flex-direction: column; /*legger elemetene i en kolonne*/
+    align-items: center; /*setter elementene i midten*/
 }
 
 h1 {
@@ -25,28 +25,28 @@ h1 {
 }
 
 p, p1, p2 {
-    text-align: center;
+    text-align: center; /*setter teksten i midten av skjermen*/
     font-size: 1.2em;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 .button, .button:visited {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 18px;
+    display: inline-block; 
+    padding: 15px 30px; /*setter hvor stort mellomrom det er mellom teksten og kanten på knappen*/
+    font-size: 18px; /*setter hvor stor teksten skal være*/
     font-weight: bold;
-    text-align: center;
+    text-align: center; /*putter knappen i midten av skjermen*/
     text-decoration: none;
     cursor: pointer;
-    color: #1f73e1;
-    border: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #1f73e1; /*setter fargen til knappen*/
+    border: none; /*gjør at knappen ikke har en kant rundt seg da man ikke holder over den*/
+    border-radius: 25px; /*gjør at knappen blir rund i kantene*/
+    transition: background-color 0.3s ease, transform 0.3s ease; /*bestemmer hvor lang tid det tar før knappen blir mørkere da man holder over den*/
     margin: 5px; /* mellomrom mellom knappene */
 }
 
 .button:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
+    background-color: #2980b9; /*setter en ny farge da man holder over knappen*/
+    transform: scale(1.05); /*bestemmer hvor mye større knappen blir når man holder over*/
 }
