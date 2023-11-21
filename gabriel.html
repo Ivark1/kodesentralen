@@ -42,26 +42,26 @@
         window.onload = function () {
             const ctx = initCanvas('brett'); // Initialiserer canvaset
             
-            drawRect(ctx, 255, 290, 200, 200, 'solid', 'black')
-            drawCircle(ctx, 255, 340, 100, 'solid', 'blue');
-            drawCircle(ctx, 300, 290, 100, 'solid', 'red');
-            drawCircle(ctx, 355, 340, 100, 'solid', 'yellow');
-            drawCircle(ctx, 300, 390, 100, 'solid', 'green');
-            drawCircle(ctx, 340, 380, 20, 'solid', 'black');
+            rectangle(ctx, 255, 290, 200, 200, 'solid', 'black')
+            circle(ctx, 255, 340, 100, 'solid', 'blue');
+            circle(ctx, 300, 290, 100, 'solid', 'red');
+            circle(ctx, 355, 340, 100, 'solid', 'yellow');
+            circle(ctx, 300, 390, 100, 'solid', 'green');
+            circle(ctx, 340, 380, 20, 'solid', 'black');
 
             const svgCanvas = document.getElementById('svgCanvas');
 
             // Draw using SVG functions
-            const rectSVG = createRectSVG(260, 50, 200, 200, 'solid', 'black');
-            const circleSVG = createCircleSVG(310, 150, 50, 100, 'blue');
-            const circle1SVG = createCircleSVG(360, 100, 50, 100, 'red');
-            const circle2SVG = createCircleSVG(410, 150, 50, 100, 'yellow');
-            const circle3SVG = createCircleSVG(360, 200, 50, 100, 'green');
-            const circle4SVG = createCircleSVG(360, 150, 10, 100, 'black');
+            const rectSVG = rectangleSVG(260, 50, 200, 200, 'solid', 'black');
+            const circle5SVG = circleSVG(310, 150, 50, 100, 'blue');
+            const circle1SVG = circleSVG(360, 100, 50, 100, 'red');
+            const circle2SVG = circleSVG(410, 150, 50, 100, 'yellow');
+            const circle3SVG = circleSVG(360, 200, 50, 100, 'green');
+            const circle4SVG = circleSVG(360, 150, 10, 100, 'black');
 
             // Append the SVG elements to the SVG canvas
             svgCanvas.appendChild(rectSVG);
-            svgCanvas.appendChild(circleSVG);
+            svgCanvas.appendChild(circle5SVG);
             svgCanvas.appendChild(circle1SVG);
             svgCanvas.appendChild(circle2SVG);
             svgCanvas.appendChild(circle3SVG);
