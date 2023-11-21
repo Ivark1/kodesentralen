@@ -17,7 +17,6 @@
 </style>    
 </head>
 
-
 <body>
 
     <div class="container">
@@ -25,11 +24,47 @@
             <h1>Hermann Karl</h1>
             <a href="index.html" class="button">Tilbake til hovedside</a>
         </header>
-        <h1>Litt om meg</h1>
-        <img src="images/figurPyretHK.png" class="center" width="400" height="300"/>
-        <p>Test p</p>
+        <h1>Hermann Karl Aronsson (21år)</h1>
+        <p>IT og Informasjonssystemer student ved Universitetet I Agder, 1. år bachelor</p>
+        <p>E-postadresse: hermannka@uia.no</p>
+        <img src="images/figurPyretHK.png" class="center" width="200" height="175"/>
+        <div>
+        <a href="https://github.com/HermannKarl/Progoblig3" class="button">Repository</a>
+        </div>
     </div>
 
-</body>
+<p>figurer</p>
+	
+    <!-- Lager et canvas element med id brett -->
+    <canvas id="brett" width="500" height="200"></canvas>
 
+    <!-- Lager et SVG element med id svgBrett -->
+    <svg id="svgBrett" width="500" height="200"></svg>
+	
+    <script>
+	//Venter på at siden laster inn før den kjører koden
+        window.onload = function () {
+        	const ctx = initCanvas('brett'); // Initialiserer canvaset
+		rectangle(ctx, 100, 100, 100, 100, 'solid', 'black'); // Tegner et blått rektangel
+        	rectangle(ctx, 50, 50, 50, 50, 'solid', 'green'); // Tegner et grønt rektangel
+		rectangle(ctx, 50, 50, 50, 50, 'solid', 'red'); // Tegner et grønt rektangel
+		rectangle(ctx, 50, 50, 50, 50, 'solid', 'blue'); // Tegner et grønt rektangel
+			
+            	const svgCanvas = document.getElementById('svgBrett');
+			
+            	// Draw using SVG functions
+            	const rSVG = rectangleSVG(100, 100, 100, 100, 'solid', 'black');
+            	const r2SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'green');
+            	const r3SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'red');
+		const r4SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'blue');
+        
+		
+		// Append the SVG elements to the SVG canvas
+            	svgCanvas.appendChild(rSVG);
+            	svgCanvas.appendChild(r2SVG);
+		svgCanvas.appendChild(r3SVG);
+		vgCanvas.appendChild(r4SVG);
+        }
+   </script>
+</body>
 </html>
