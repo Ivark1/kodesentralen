@@ -55,15 +55,15 @@
             const svgCanvas = document.getElementById('svgBrett');
 
             // Draw using SVG functions
-            const circlefigureSVG = circlefigureSVG(310, 110, 10, 50, 'red');
-            const circlefigure2SVG = circlefigureSVG(310, 110, 10, 35, 'yellow');
+            const cfSVG = circlefigureSVG(310, 110, 10, 50, 'red');
+            const cf2SVG = circlefigureSVG(310, 110, 10, 35, 'yellow');
             const rectSVG = rectangleSVG(260, 60, 100, 100, 'outline', 'blue');
             const rect2SVG = rectangleSVG(255, 55, 110, 110, 'outline', 'blue');
             const rect3SVG = rectangleSVG(250, 50, 120, 120, 'outline', 'blue');
 
             // Append the SVG elements to the SVG canvas
-            svgCanvas.appendChild(circlefigureSVG);
-            svgCanvas.appendChild(circlefigure2SVG);
+            svgCanvas.appendChild(cfSVG);
+            svgCanvas.appendChild(cf2SVG);
             svgCanvas.appendChild(rectSVG);
             svgCanvas.appendChild(rect2SVG);
             svgCanvas.appendChild(rect3SVG);
