@@ -33,6 +33,39 @@
         <a href="https://github.com/HermannKarl/Progoblig3" class="button">Repository</a>
         </div>
     </div>
-    
+
+    <!-- Lager et canvas element med id brett -->
+    <canvas id="brett" width="1400" height="650"></canvas>
+
+    <!-- Lager et SVG element med id svgBrett -->
+    <svg id="svgBrett" width="1400" height="300"></svg>
+
+    <script>
+        //Venter på at siden laster inn før den kjører koden
+        window.onload = function () {
+            const ctx = initCanvas('brett'); // Initialiserer canvaset
+            circlefigure(ctx, 275, 450, 10, 60, 'red'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
+            circlefigure(ctx, 285, 460, 10, 40, 'yellow'); // Tegner en sirkel av sirkler
+            rectangle(ctx, 255, 430, 100, 100, 'outline', 'blue'); // Tegner en firkant, med bredde 100, høyde 100, blå farge
+            rectangle(ctx, 250, 425, 110, 110, 'outline', 'blue'); // Tegner en firkant
+            rectangle(ctx, 245, 420, 120, 120, 'outline', 'blue'); // Tegner en firkant
+
+            const svgCanvas = document.getElementById('svgBrett');
+
+            // Draw using SVG functions
+            const cfSVG = circlefigureSVG(310, 110, 10, 50, 'red');
+            const cf2SVG = circlefigureSVG(310, 110, 10, 35, 'yellow');
+            const rectSVG = rectangleSVG(260, 60, 100, 100, 'outline', 'blue');
+            const rect2SVG = rectangleSVG(255, 55, 110, 110, 'outline', 'blue');
+            const rect3SVG = rectangleSVG(250, 50, 120, 120, 'outline', 'blue');
+
+            // Append the SVG elements to the SVG canvas
+            svgCanvas.appendChild(cfSVG);
+            svgCanvas.appendChild(cf2SVG);
+            svgCanvas.appendChild(rectSVG);
+            svgCanvas.appendChild(rect2SVG);
+            svgCanvas.appendChild(rect3SVG);
+        }
+    </script>
 </body>
 </html>
