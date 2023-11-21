@@ -8,7 +8,7 @@ function initCanvas(canvasId) {
 
 
 // Funksjon for å tegne en sirkel
-function drawCircle(context, x, y, size, fillMode, color) {
+function circle(context, x, y, size, fillMode, color) {
     const radius = size / 2;
 
     context.fillStyle = color;
@@ -26,7 +26,7 @@ function drawCircle(context, x, y, size, fillMode, color) {
     }
 }
 
-function drawRect(context, x, y, width, height, fillMode, color) {
+function rectangle(context, x, y, width, height, fillMode, color) {
     context.fillStyle = color;
 
     if (fillMode === 'solid') {
@@ -40,7 +40,7 @@ function drawRect(context, x, y, width, height, fillMode, color) {
 
 
 
-function drawCircleOfCircles(ctx, centerX, centerY, numCircles, circleRadius, circleColor) {
+function circlefigure(ctx, centerX, centerY, numCircles, circleRadius, circleColor) {
     const angleIncrement = (2 * Math.PI) / numCircles;
 
     for (let i = 0; i < numCircles; i++) {
@@ -48,12 +48,12 @@ function drawCircleOfCircles(ctx, centerX, centerY, numCircles, circleRadius, ci
         const x = centerX + circleRadius * Math.cos(angle);
         const y = centerY + circleRadius * Math.sin(angle);
 
-        drawCircle(ctx, x, y, circleRadius, 'solid', circleColor);
+        circle(ctx, x, y, circleRadius, 'solid', circleColor);
     }
 }
 
 
-function createCircleSVG(x, y, radius, fillMode, color) {
+function circleSVG(x, y, radius, fillMode, color) {
     const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     circle.setAttribute('cx', x);
     circle.setAttribute('cy', y);
@@ -69,7 +69,7 @@ function createCircleSVG(x, y, radius, fillMode, color) {
 }
 
 // fuksjon for å lage en firkant
-function createRectSVG(x, y, width, height, fillMode, color) {
+function rectangleSVG(x, y, width, height, fillMode, color) {
     const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect'); // lager elementet før man putter på atributes
     rect.setAttribute('x', x); // setter hvor på x aksen rektanglet skal være
     rect.setAttribute('y', y); // setter hvor på y aksen rektanglet skal være
@@ -87,7 +87,7 @@ function createRectSVG(x, y, width, height, fillMode, color) {
 }
 
 // funksjon for å lage en gruppe med sirkler som danner en sirkel
-function createCircleOfCirclesSVG(centerX, centerY, numCircles, circleRadius, circleColor) {
+function circlefigureSVG(centerX, centerY, numCircles, circleRadius, circleColor) {
     const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
     const angleIncrement = (2 * Math.PI) / numCircles; // setter hvor stort hoppet mellom hver av sirklene er
@@ -97,7 +97,7 @@ function createCircleOfCirclesSVG(centerX, centerY, numCircles, circleRadius, ci
         const x = centerX + circleRadius * Math.cos(angle); // finner ut hvor på x aksen den neste sirklen skla plasseres og plasserer den
         const y = centerY + circleRadius * Math.sin(angle); // finner ut hvor på x aksen den neste sirklen skla plasseres og plasserer den
 
-        const circle = createCircleSVG(x, y, circleRadius, 'solid', circleColor);
+        const circle = circleSVG(x, y, circleRadius, 'solid', circleColor);
         group.appendChild(circle);
     }
 
