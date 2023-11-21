@@ -5,29 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">  <title>Camilla</title>
 <link rel="stylesheet" href="css/StyleMain.css">  
 <!-- Finner filen figures.js og kjører den -->
-    <script src="js/figures.js" defer></script>
+    <script src="figures.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Camilla</h1>
-            <a href="index.html" class="button">Tilbake til hovedside</a>
-        </header>
-        <h1>Camilla Uglem Remøy (22 år)</h1>
-		 <br><br>
-        <img src="images/voffse.jpg"
-  width="576" 
-  height="768"
-  class="center"/>
-  <br><br>
-  <p>Student ved Universitetet i Agder, 1. år bachelor i IT og informasjonssystemer</p> 
-<br><br>
-<h2><b>Email</b></h2>
-<p>camillaur@uia.no</p>
-<br><br>
- <h2><b>Hobbyer</b></h2>
- <p>Trene, gå tur og være med folk</p>
- <br><br>
 <h1>Figur</h1>
 <br><br>
 <p>Canvas og SVG</p>
@@ -62,16 +42,6 @@
 		    svgCanvas.appendChild(cSVG);
         }
    </script>
-   <br><br><br><br>
-   <p>Pyret</p>
-   <br><br>
-		   <a href="https://github.com/camillaur/is-114/blob/main/figurCUR.arr">Link til repository med pyret-kode</a>
-   <br><br>
-   <h2>Klimafotavtrykk</h2>
-   <img src ="images/klimafotavtrykkCUR.png"/>
-</div>
+   </div>
 </body>
 </html>
-
-
-
