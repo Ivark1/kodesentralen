@@ -1,13 +1,37 @@
- <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000;"></canvas>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enkelt juletre med Canvas API</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000;"></canvas>
 
   <script>
-var canvas = document.getElementById("myCanvas");
+    var canvas = document.getElementById("myCanvas");
     var context = canvas.getContext("2d");
     
        // Treetopp
     context.fillStyle = "#228B22"; // Velger fargen ForestGreen - bruker fargekoden over
     context.fillRect(250, 50, 50, 20);
 
+ 
+  // Forsetter å bygge tretoppene
+    context.fillStyle = "#228B22"; 
+    context.fillRect(225, 70, 100, 30);
+    context.fillRect(200, 100, 150, 40);
+    context.fillRect(175, 140, 200, 50);
+    context.fillRect(150, 190, 250, 60);
+   context.fillRect(125, 250, 300, 80);
+   context.fillRect(100, 330, 350, 100);
+    
+    
+    // Setter til slutt inn stammen, bruker fargen saddle brown
+    context.fillStyle = "#8B4513"; 
+    context.fillRect(250, 430, 40, 40);
+    
+  </script>
+</body>
+</html>
  
   // Forsetter å bygge tretoppene
     context.fillStyle = "#228B22"; 
