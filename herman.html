@@ -46,25 +46,22 @@
 	//Venter på at siden laster inn før den kjører koden
         window.onload = function () {
         	const ctx = initCanvas('brett'); // Initialiserer canvaset
-		rectangle(ctx, 100, 100, 100, 100, 'solid', 'black');
-        	rectangle(ctx, 50, 50, 50, 50, 'solid', 'green');
-		rectangle(ctx, 50, 50, 50, 50, 'solid', 'red');
-		rectangle(ctx, 50, 50, 50, 50, 'solid', 'blue');
+		rectangle(ctx, 100, 100, 75, 75, 'solid', 'green');
+        	rectangle(ctx, 50, 50, 75, 75, 'solid', 'red');
+		rectangle(ctx, 50, 50, 75, 75, 'solid', 'blue');
 			
             	const svgCanvas = document.getElementById('svgBrett');
 			
             	// Draw using SVG functions
-            	const rSVG = rectangleSVG(100, 100, 100, 100, 'solid', 'black');
-            	const r2SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'green');
-            	const r3SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'red');
-		const r4SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'blue');
+            	const rSVG = rectangleSVG(100, 100, 75, 75, 'solid', 'green');
+            	const r2SVG = rectangleSVG(50, 50, 75, 75, 'solid', 'red');
+            	const r3SVG = rectangleSVG(50, 50, 75, 75, 'solid', 'blue');
         
 		
 		// Append the SVG elements to the SVG canvas
             	svgCanvas.appendChild(rSVG);
             	svgCanvas.appendChild(r2SVG);
 		svgCanvas.appendChild(r3SVG);
-		svgCanvas.appendChild(r4SVG);
         }
    </script>
 </body>
