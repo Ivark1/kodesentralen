@@ -21,13 +21,13 @@ const rect8GBSVG = rectangleSVG(100, 300, 350, 100, 'solid', 'green');
    
     
 //Legger figurene i SVG-canvaset
-svg.Canvas.appendChild(rect1GBSVG);
-svg.Canvas.appendChild(rect2GBSVG);
-svg.Canvas.appendChild(rect3GBSVG);
-svg.Canvas.appendChild(rect4GBSVG);
-svg.Canvas.appendChild(rect5GBSVG);
-svg.Canvas.appendChild(rect6GBSVG);
-svg.Canvas.appendChild(rect7GBSVG);
-svg.Canvas.appendChild(rect8GBSVG);
+svgCanvas.appendChild(rect1GBSVG);
+svgCanvas.appendChild(rect2GBSVG);
+svgCanvas.appendChild(rect3GBSVG);
+svgCanvas.appendChild(rect4GBSVG);
+svgCanvas.appendChild(rect5GBSVG);
+svgCanvas.appendChild(rect6GBSVG);
+svgCanvas.appendChild(rect7GBSVG);
+svgCanvas.appendChild(rect8GBSVG);
     
 
