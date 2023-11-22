@@ -1,10 +1,10 @@
 
-            rectangle(ctx, 640, 290, 200, 200, 'solid', 'black')
-            circle(ctx, 640, 340, 100, 'solid', 'blue');
-            circle(ctx, 685, 290, 100, 'solid', 'red');
-            circle(ctx, 740, 340, 100, 'solid', 'yellow');
-            circle(ctx, 685, 390, 100, 'solid', 'green');
-            circle(ctx, 725, 380, 20, 'solid', 'black');
+            rectangle(ctx, 640, 40, 200, 200, 'solid', 'black')
+            circle(ctx, 640, 90, 100, 'solid', 'blue');
+            circle(ctx, 685, 40, 100, 'solid', 'red');
+            circle(ctx, 740, 90, 100, 'solid', 'yellow');
+            circle(ctx, 685, 140, 100, 'solid', 'green');
+            circle(ctx, 725, 130, 20, 'solid', 'black');
 
         
 

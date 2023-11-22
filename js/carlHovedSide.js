@@ -1,10 +1,10 @@
 
 
-circlefigure(ctx, 275, 450, 10, 60, 'red'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
-circlefigure(ctx, 285, 460, 10, 40, 'yellow'); // Tegner en sirkel av sirkler
-rectangle(ctx, 255, 430, 100, 100, 'outline', 'blue'); // Tegner en firkant, med bredde 100, høyde 100, blå farge
-rectangle(ctx, 250, 425, 110, 110, 'outline', 'blue'); // Tegner en firkant
-rectangle(ctx, 245, 420, 120, 120, 'outline', 'blue'); // Tegner en firkant
+circlefigure(ctx, 275, 100, 10, 60, 'red'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
+circlefigure(ctx, 285, 120, 10, 40, 'yellow'); // Tegner en sirkel av sirkler
+rectangle(ctx, 255, 80, 100, 100, 'outline', 'blue'); // Tegner en firkant, med bredde 100, høyde 100, blå farge
+rectangle(ctx, 250, 75, 110, 110, 'outline', 'blue'); // Tegner en firkant
+rectangle(ctx, 245, 70, 120, 120, 'outline', 'blue'); // Tegner en firkant
 
 // Tegner med SVG
 const cfSVG = circlefigureSVG(310, 110, 10, 50, 'red');
