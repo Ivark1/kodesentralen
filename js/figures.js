@@ -4,8 +4,8 @@ function initCanvas(canvasId) {
     const context = canvas.getContext('2d');
     return context;
 }
-
-
+const ctx = initCanvas('brett'); // Initialiserer canvaset
+const svgCanvas = document.getElementById('svgBrett');
 
 // Funksjon for å tegne en sirkel
 function circle(context, x, y, size, fillMode, color) {

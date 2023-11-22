@@ -1,5 +1,4 @@
-const ctx = initCanvas('brett'); // Initialiserer canvaset
-const svgCanvas = document.getElementById('svgBrett');
+
 
 circlefigure(ctx, 275, 450, 10, 60, 'red'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
 circlefigure(ctx, 285, 460, 10, 40, 'yellow'); // Tegner en sirkel av sirkler

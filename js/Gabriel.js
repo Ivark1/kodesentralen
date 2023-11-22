@@ -1,6 +1,3 @@
-const ctx = initCanvas('brett'); // Initialiserer canvaset
-
-const svgCanvas = document.getElementById('svgCanvas');
 
             rectangle(ctx, 640, 290, 200, 200, 'solid', 'black')
             circle(ctx, 640, 340, 100, 'solid', 'blue');
