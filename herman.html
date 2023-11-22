@@ -47,15 +47,15 @@
         window.onload = function () {
         	const ctx = initCanvas('brett'); // Initialiserer canvaset
 		rectangle(ctx, 150, 40, 75, 75, 'solid', 'chartreuse');
-        	rectangle(ctx, 200, 115, 75, 75, 'solid', 'blue');
-		rectangle(ctx, 50, 100, 75, 75, 'solid', 'red');
+        	rectangle(ctx, 175, 115, 75, 75, 'solid', 'blue');
+		rectangle(ctx, 50, 40, 75, 75, 'solid', 'red');
 			
             	const svgCanvas = document.getElementById('svgBrett');
 			
             	// Draw using SVG functions
             	const rSVG = rectangleSVG(150, 40, 75, 75, 'solid', 'chartreuse');
-            	const r2SVG = rectangleSVG(200, 115, 75, 75, 'solid', 'blue');
-            	const r3SVG = rectangleSVG(50, 100, 75, 75, 'solid', 'red');
+            	const r2SVG = rectangleSVG(175, 115, 75, 75, 'solid', 'blue');
+            	const r3SVG = rectangleSVG(50, 40, 75, 75, 'solid', 'red');
         
 		
 		// Append the SVG elements to the SVG canvas
