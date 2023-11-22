@@ -1,34 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">  <title>Thea</title>
-<link rel="stylesheet" href="css/StyleMain.css">
-<style>
-    .container {
-        background: linear-gradient(to bottom, #3f98f1, #f7f7f7);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thea</title>
+    <link rel="stylesheet" href="css/StyleMain.css">
+    <!-- Finner filen figures.js og kjører den -->
+    <script src="js/figures.js" defer></script>
     
-    header {
-        color: #ffffff;
-        text-align: center;
-        padding: 70px;
-    }
-</style>    
+    <!-- Lager en style som gjør at siden får en bakgrunnsfarge og at headeren får en annen farge -->
+    <style> 
+        .container {
+            background: linear-gradient(to bottom, #3f98f1, #f7f7f7);
+        }
+        
+        header {
+            color: #ffffff;
+            text-align: center;
+            padding: 70px;
+        }
+    </style>    
 </head>
-
-
 <body>
-
+    <!-- Lager en container (div) som inneholder en header og en knapp -->
     <div class="container">
         <header>
-            <h1>Thea</h1>
+            <h1>Thea</h1> 
+            <!-- Lager en knapp som tar deg tilbake til hovedsiden -->
             <a href="index.html" class="button">Tilbake til hovedside</a>
         </header>
-        <h1>Test h1</h1>
-        <p>Test p</p>
+        <h1>Thea(22 år)</h1>
+        <div style="position: relative;">
+            <img src="images/Tsbilde.JPG"
+            width="200"
+            height="100"
+            style="position: relative; left: 0px; top: 20px;"/>
+
+            <p>Figur 1: Pyret</p>
+            <p>Figur 2: Canvas</p>
+            <p>Figur 3: SVG</p>
+            <br></br>
+           <p>Student ved Universitetet i Agder, 1. år bachelor i IT og informasjonssystemer.</p> 
+            <P> theaska@uia.no</P>
+            <a href="https://github.com/theask23/IS---114-2.0.git" class="button">Repository med Pyret kode</a>
+
+        </div>
+        <div style="position: relative;">
+            <img src="images/TSbilde.png" 
+            
+            style="position: absolute; left: 170px; top: 120px;"/>
+        </div>
     </div>
 
-</body>
+    <!-- Lager et canvas element med id brett -->
+    <canvas id="brett" width="1400" height="500"></canvas>
 
+    <!-- Lager et SVG element med id svgBrett -->
+    <svg id="svgBrett" width="1400" height="500"></svg>
+
+    <script>
+        //Venter på at siden laster inn før den kjører koden
+        window.onload = function () {
+            const ctx = initCanvas('brett'); // Initialiserer canvaset
+            rectangle(ctx, 240, 300, 180, 180, 'solid', 'rgb(191, 151, 154)');
+            circle(ctx, 335, 400, 80, 'outline', 'black');
+            circle(ctx, 240, 380, 100, 'solid', 'pink');
+            circle(ctx, 300, 300, 120, 'solid', 'rgb(235, 52, 113)');
+            const svgCanvas = document.getElementById('svgBrett');
+
+
+            // Draw using SVG functions
+            const cfSVG =  rectangleSVG(240, 50, 180, 180, 'solid', 'rgb(191, 151, 154)');
+            const cf2SVG = circleSVG(335, 110, 50, 'outline', 'rbg(230, 140, 165');
+            const rectSVG = circleSVG(300, 175, 55, 'solid', 'pink');
+            const rect2SVG = circleSVG(360, 110, 60, 'solid', 'rgb(235, 52, 113)');
+            
+
+            // Append the SVG elements to the SVG canvas
+            svgCanvas.appendChild(cfSVG);
+            svgCanvas.appendChild(cf2SVG);
+            svgCanvas.appendChild(rectSVG);
+            svgCanvas.appendChild(rect2SVG);
+            
+        }
+    </script>
+    <div class="container">
+        <header>
+            <br><br>
+            <h2>Klimafotavtrykk</h2>
+            <img src ="images/KlimafotavtrykkTS.png"/>
+        </header>
+    </div>
+</body>
 </html>

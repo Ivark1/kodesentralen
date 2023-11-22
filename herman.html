@@ -34,10 +34,10 @@
         </div>
     </div>
 
-<p>Canvas API og SVG API</p>
+<p>Canvas API, SVG API og Pyret Figurer</p>
 	
     <!-- Lager et canvas element med id brett -->
-    <canvas id="svgBrett" width="500" height="200"></canvas>
+    <canvas id="brett" width="500" height="200"></canvas>
 
     <!-- Lager et SVG element med id svgBrett -->
     <svg id="svgBrett" width="500" height="200"></svg>
@@ -46,27 +46,31 @@
 	//Venter på at siden laster inn før den kjører koden
         window.onload = function () {
         	const ctx = initCanvas('brett'); // Initialiserer canvaset
-		rectangle(ctx, 100, 100, 100, 100, 'solid', 'black');
-        	rectangle(ctx, 50, 50, 50, 50, 'solid', 'green');
-		rectangle(ctx, 50, 50, 50, 50, 'solid', 'red');
-		rectangle(ctx, 50, 50, 50, 50, 'solid', 'blue');
+		rectangle(ctx, 150, 40, 75, 75, 'solid', 'chartreuse');
+        	rectangle(ctx, 185, 115, 75, 75, 'solid', 'blue');
+		rectangle(ctx, 110, 115, 75, 75, 'solid', 'red');
 			
             	const svgCanvas = document.getElementById('svgBrett');
 			
             	// Draw using SVG functions
-            	const rSVG = rectangleSVG(100, 100, 100, 100, 'solid', 'black');
-            	const r2SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'green');
-            	const r3SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'red');
-		const r4SVG = rectangleSVG(50, 50, 50, 50, 'solid', 'blue');
+            	const rSVG = rectangleSVG(150, 40, 75, 75, 'solid', 'chartreuse');
+            	const r2SVG = rectangleSVG(185, 115, 75, 75, 'solid', 'blue');
+            	const r3SVG = rectangleSVG(110, 115, 75, 75, 'solid', 'red');
         
 		
 		// Append the SVG elements to the SVG canvas
             	svgCanvas.appendChild(rSVG);
             	svgCanvas.appendChild(r2SVG);
 		svgCanvas.appendChild(r3SVG);
-		svgCanvas.appendChild(r4SVG);
         }
    </script>
+	<img src="images/figurPyretHK.png" class="center" width="200" height="175"/>
+<div>
+	<h2>Klimafotavtrykk</h2>
+   <img src ="images/klimafotavtrykkCUR.png"/>
+	<br><br>
+	<p>Grafen representerer et utregning av klimafotavtrykket mitt. Jeg er helt gæren etter drifting og å ruse motoren på bilen min, så er ikke så rart at det er der utslippet er høyest. </p>
+</div>
 
 </body>
 </html>
