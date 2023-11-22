@@ -46,6 +46,7 @@
     </div>
 
 
+
     <!-- Lager et canvas element med id brett -->
     <canvas id="brett" width="1400" height="650"></canvas>
 
@@ -62,18 +63,18 @@
             const svgCanvas = document.getElementById('svgBrett');
 
             // Draw using SVG functions
-            const rect1SVG = rectangleSVG(235, 375, 350, 60, 'solid','black');
-            const cf2SVG = circlefigureSVG(310, 110, 10, 35, 'yellow');
-            const rectSVG = rectangleSVG(260, 60, 100, 100, 'outline', 'blue');
-            const rect2SVG = rectangleSVG(255, 55, 110, 110, 'outline', 'blue');
-            const rect3SVG = rectangleSVG(250, 50, 120, 120, 'outline', 'blue');
+            const rect1SVG = rectangleSVG(200, 400, 350, 200, 'solid','black');
+            const rect2SVG = rectagleSVG(250, 400, 240, 200, 'solid', 'yellow');
+            const rect3SVG = rectangleSVG(250, 400, 100, 100, 'solid', 'red');
+            const circle1SVG = circleSVG(320, 450, 100,  'solid', 'chartreuse');
+            
 
             // Append the SVG elements to the SVG canvas
             svgCanvas.appendChild(rect1SVG);
-            svgCanvas.appendChild(cf2SVG);
-            svgCanvas.appendChild(rectSVG);
             svgCanvas.appendChild(rect2SVG);
             svgCanvas.appendChild(rect3SVG);
+            svgCanvas.appendChild(circle1SVG);
+            
         }
         
       </script>
