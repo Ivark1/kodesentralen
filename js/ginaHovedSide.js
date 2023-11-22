@@ -1,22 +1,22 @@
 
-rectangle(ctx, 1250, 580, 40, 40, 'solid', 'brown');
-rectangle(ctx, 1250, 200, 50, 20, 'solid', 'green');
-rectangle(ctx, 1225, 220, 100, 30, 'solid', 'green');
-rectangle(ctx, 1200, 250, 150, 40, 'solid', 'green');
-rectangle(ctx, 1175, 290, 200, 50, 'solid', 'green');
-rectangle(ctx, 1150, 340, 250, 60, 'solid', 'green');
-rectangle(ctx, 1125, 400, 300, 80, 'solid', 'green');
-rectangle(ctx, 1100, 480, 350, 100, 'solid', 'green');
+rectangle(ctx, 250, 430, 40, 40, 'solid', 'brown');
+rectangle(ctx, 250, 50, 50, 20, 'solid', 'green');
+rectangle(ctx, 225, 70, 100, 30, 'solid', 'green');
+rectangle(ctx, 200, 100, 150, 40, 'solid', 'green');
+rectangle(ctx, 175, 140, 200, 50, 'solid', 'green');
+rectangle(ctx, 150, 190, 250, 60, 'solid', 'green');
+rectangle(ctx, 125, 250, 300, 80, 'solid', 'green');
+rectangle(ctx, 100, 330, 350, 100, 'solid', 'green');
 
  // Tegner med SVG
-const rect1GBSVG = rectangleSVG(1450, 400, 40, 60, 'solid', 'brown');
-const rect2GBSVG = rectangleSVG(1450, 50, 50, 20, 'solid', 'green');
-const rect3GBSVG = rectangleSVG(1425, 70, 100, 30, 'solid', 'green');
-const rect4GBSVG = rectangleSVG(1400, 100, 150, 40, 'solid', 'green');
-const rect5GBSVG = rectangleSVG(1375, 140, 200, 50, 'solid', 'green');
-const rect6GBSVG = rectangleSVG(1350, 190, 250, 60, 'solid', 'green');
-const rect7GBSVG = rectangleSVG(1325, 250, 300, 80, 'solid', 'green');
-const rect8GBSVG = rectangleSVG(1300, 300, 350, 100, 'solid', 'green');
+const rect1GBSVG = rectangleSVG(250, 430, 40, 40, 'solid', 'brown');
+const rect2GBSVG = rectangleSVG(250, 50, 50, 20, 'solid', 'green');
+const rect3GBSVG = rectangleSVG(225, 70, 100, 30, 'solid', 'green');
+const rect4GBSVG = rectangleSVG(200, 100, 150, 40, 'solid', 'green');
+const rect5GBSVG = rectangleSVG(175, 140, 200, 50, 'solid', 'green');
+const rect6GBSVG = rectangleSVG(150, 190, 250, 60, 'solid', 'green');
+const rect7GBSVG = rectangleSVG(125, 250, 300, 80, 'solid', 'green');
+const rect8GBSVG = rectangleSVG(100, 330, 350, 100, 'solid', 'green');
    
    
     

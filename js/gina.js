@@ -16,7 +16,7 @@ const rect4GBSVG = rectangleSVG(200, 100, 150, 40, 'solid', 'green');
 const rect5GBSVG = rectangleSVG(175, 140, 200, 50, 'solid', 'green');
 const rect6GBSVG = rectangleSVG(150, 190, 250, 60, 'solid', 'green');
 const rect7GBSVG = rectangleSVG(125, 250, 300, 80, 'solid', 'green');
-const rect8GBSVG = rectangleSVG(100, 300, 350, 100, 'solid', 'green');
+const rect8GBSVG = rectangleSVG(100, 330, 350, 100, 'solid', 'green');
    
    
     
