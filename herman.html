@@ -33,7 +33,7 @@
         </div>
     </div>
 
-<p>figurer</p>
+<p>Canvas API og SVG API</p>
 	
     <!-- Lager et canvas element med id brett -->
     <canvas id="brett" width="500" height="200"></canvas>
@@ -45,10 +45,10 @@
 	//Venter på at siden laster inn før den kjører koden
         window.onload = function () {
         	const ctx = initCanvas('brett'); // Initialiserer canvaset
-		rectangle(ctx, 100, 100, 100, 100, 'solid', 'black'); // Tegner et blått rektangel
-        	rectangle(ctx, 50, 50, 50, 50, 'solid', 'green'); // Tegner et grønt rektangel
-		rectangle(ctx, 50, 50, 50, 50, 'solid', 'red'); // Tegner et grønt rektangel
-		rectangle(ctx, 50, 50, 50, 50, 'solid', 'blue'); // Tegner et grønt rektangel
+		rectangle(ctx, 100, 100, 100, 100, 'solid', 'black');
+        	rectangle(ctx, 50, 50, 50, 50, 'solid', 'green');
+		rectangle(ctx, 50, 50, 50, 50, 'solid', 'red');
+		rectangle(ctx, 50, 50, 50, 50, 'solid', 'blue');
 			
             	const svgCanvas = document.getElementById('svgBrett');
 			
@@ -63,8 +63,10 @@
             	svgCanvas.appendChild(rSVG);
             	svgCanvas.appendChild(r2SVG);
 		svgCanvas.appendChild(r3SVG);
-		vgCanvas.appendChild(r4SVG);
+		svgCanvas.appendChild(r4SVG);
         }
    </script>
+
+<p>Klimafotavtrykk</p>
 </body>
 </html>

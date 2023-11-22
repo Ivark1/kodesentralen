@@ -30,6 +30,11 @@
             <a href="index.html" class="button">Tilbake til hovedside</a>
         </header>
         <h1>Ivar Kaldheim (31år)</h1>
+            <br><br>
+         <center>
+        <img src="images/fiskIK.png"
+             </center>
+             <br><br>
         <p>Student ved Universitetet i Agder, 1. år bachelor i IT og informasjonssystemer</p>
         <br><br>
         <p>ivark@uia.no</p>
@@ -39,6 +44,7 @@
         </div>
 
     </div>
+
 
 
     <!-- Lager et canvas element med id brett -->
@@ -51,24 +57,24 @@
             rectangle(ctx, 200, 400, 350, 200,  'solid', 'black'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
             rectangle(ctx, 250, 400, 240, 200, 'solid', 'blue'); // Tegner en sirkel av sirkler
             rectangle(ctx, 250, 450, 240, 100, 'solid', 'red')
-            circle(ctx, 320, 450, 100, 'solid', 'green')
+            circle(ctx, 320, 450, 100, 'solid', 'chartreuse')
 
 
             const svgCanvas = document.getElementById('svgBrett');
 
             // Draw using SVG functions
-            const rect1SVG = rectangleSVG(235, 375, 350, 60, 'solid','black');
-            const cf2SVG = circlefigureSVG(310, 110, 10, 35, 'yellow');
-            const rectSVG = rectangleSVG(260, 60, 100, 100, 'outline', 'blue');
-            const rect2SVG = rectangleSVG(255, 55, 110, 110, 'outline', 'blue');
-            const rect3SVG = rectangleSVG(250, 50, 120, 120, 'outline', 'blue');
+            const rect1SVG = rectangleSVG(200, 400, 350, 200, 'solid','black');
+            const rect2SVG = rectagleSVG(250, 400, 240, 200, 'solid', 'yellow');
+            const rect3SVG = rectangleSVG(250, 400, 100, 100, 'solid', 'red');
+            const circle1SVG = circleSVG(320, 450, 100,  'solid', 'chartreuse');
+            
 
             // Append the SVG elements to the SVG canvas
             svgCanvas.appendChild(rect1SVG);
-            svgCanvas.appendChild(cf2SVG);
-            svgCanvas.appendChild(rectSVG);
             svgCanvas.appendChild(rect2SVG);
             svgCanvas.appendChild(rect3SVG);
+            svgCanvas.appendChild(circle1SVG);
+            
         }
         
       </script>
@@ -81,6 +87,11 @@
       <h2>Klimafotavtrykk</h2>
       <img src ="images/klimafotavtrykkIK.png"/>
    </div>
+        <br><br>
+<p>Kjører mye til og fra Oslo, bruker nok mer drivstoff en gjennomsnittet </p>
+</div>
+</body>
+</html>
         </center>
 
 </body>
