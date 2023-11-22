@@ -48,7 +48,10 @@
 
 
     <!-- Lager et canvas element med id brett -->
-    <canvas id="brett" width="1400" height="650"></canvas>
+    <canvas id="brett" width="1400" height="600"></canvas>
+
+    <!-- Lager et SVG element med id svgBrett -->
+    <svg id="svgBrett" width="1400" height="500"></svg>
 
     <script>
         //Venter på at siden laster inn før den kjører koden
@@ -63,10 +66,10 @@
             const svgCanvas = document.getElementById('svgBrett');
 
             // Draw using SVG functions
-            const rect1SVG = rectangleSVG(200, 400, 350, 200, 'solid','black');
-            const rect2SVG = rectagleSVG(250, 400, 240, 200, 'solid', 'yellow');
-            const rect3SVG = rectangleSVG(250, 400, 100, 100, 'solid', 'red');
-            const circle1SVG = circleSVG(320, 450, 100,  'solid', 'chartreuse');
+            const rect1SVG = rectangleSVG(200, 200, 350, 200, 'solid','black');
+            const rect2SVG = rectangleSVG(250, 200, 240, 200, 'solid', 'yellow');
+            const rect3SVG = rectangleSVG(250, 200, 100, 100, 'solid', 'red');
+            const circle1SVG = circleSVG(320, 250, 100,  'solid', 'chartreuse');
             
 
             // Append the SVG elements to the SVG canvas
@@ -86,12 +89,10 @@
       <br><br>
       <h2>Klimafotavtrykk</h2>
       <img src ="images/klimafotavtrykkIK.png"/>
-   </div>
+   <div>
         <br><br>
 <p>Kjører mye til og fra Oslo, bruker nok mer drivstoff en gjennomsnittet </p>
 </div>
-</body>
-</html>
         </center>
 
 </body>
