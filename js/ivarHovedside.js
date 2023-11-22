@@ -5,10 +5,10 @@ rectangle(ctx, 750, 550, 240, 100, 'solid', 'red');
 circle(ctx, 820, 550, 100, 'solid', 'chartreuse');
 
 // Tegner med SVG
-const rect1IKSVG = rectangleSVG(700, 200, 350, 200, 'solid','black');
-const rect2IKSVG = rectangleSVG(750, 200, 240, 200, 'solid', 'blue');
+const rect1IKSVG = rectangleSVG(700, 300, 350, 200, 'solid','black');
+const rect2IKSVG = rectangleSVG(750, 300, 240, 200, 'solid', 'blue');
 const rect3IKSVG = rectangleSVG(750, 350, 240, 100, 'solid', 'red');
-const circle1IKSVG = circleSVG(875, 300, 50,  'solid', 'chartreuse');
+const circle1IKSVG = circleSVG(875, 400, 50,  'solid', 'chartreuse');
             
 
 // Legger figurene i SVG-canvaset
