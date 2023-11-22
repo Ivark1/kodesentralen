@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl</title>
+    <link rel="stylesheet" href="css/StyleMain.css">
+    
+    <!-- Lager en style som gjør at siden får en bakgrunnsfarge og at headeren får en annen farge -->
+    <style> 
+        .container {
+            background: linear-gradient(to bottom, #3f98f1, #f7f7f7);
+        }
+        
+        header {
+            color: #ffffff;
+            text-align: center;
+            padding: 70px;
+        }
+    </style>    
+</head>
+<body>
+    <!-- Lager en container (div) som inneholder en header og en knapp -->
+    <div class="container">
+        <header>
+            <h1>Carl</h1> 
+            <!-- Lager en knapp som tar deg tilbake til hovedsiden -->
+            <a href="index.html" class="button">Tilbake til hovedside</a>
+        </header>
+        <h1>Carl Arnegard (19år)</h1>
+        <p>Student ved Universitetet i Agder, 1. år bachelor i IT og informasjonssystemer</p>
+        <br><br>
+        <p>carlaa@uia.no</p>
+        <a href="https://github.com/CarlAndreasArnegard/Quantum-Bank.git" class="button">Repository med Pyret kode</a>
+        <br><br>
+        <p>Figur nr.1 er Pyret figuren</p>
+        <p>Figur nr.2 er Canvas figuren</p>
+        <p>Figur nr.3 er SVG figuren</p>
+
+        <div style="position: relative;">
+            <img src="images/figurPyretCA.png" style="position: absolute; left: 115px; top: 120px;"/>
+        </div>
+    </div>
+
+    <!-- Lager et canvas element med id brett -->
+    <canvas id="brett" width="1400" height="650"></canvas>
+
+    <!-- Lager et SVG element med id svgBrett -->
+    <svg id="svgBrett" width="1400" height="300"></svg>
+
+    <!-- Finner filen figures.js og kjører den -->
+    <script src="js/figures.js"></script>
+    <!-- Finner filen carl.js og kjører den -->
+    <script src="js/carl.js"></script>
+
+    <div class="container">
+        <header>
+            <br><br>
+            <h2>Klimafotavtrykk</h2>
+            <img src ="images/klimafotavtrykkCA.png"/>
+        </header>
+    </div>
+</body>
+</html>

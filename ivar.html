@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivar</title>
+    <link rel="stylesheet" href="css/StyleMain.css">
+    <!-- Finner filen figures.js og kjører den -->
+    <script src="js/figures.js" defer></script>
+    
+    <!-- Lager en style som gjør at siden får en bakgrunnsfarge og at headeren får en annen farge -->
+    <style> 
+        .container {
+            background: linear-gradient(to bottom, #3f98f1, #f7f7f7);
+        }
+        
+        header {
+            color: #ffffff;
+            text-align: center;
+            padding: 70px;
+        }
+    </style>    
+</head>
+<body>
+    <!-- Lager en container (div) som inneholder en header og en knapp -->
+    <div class="container">
+        <header>
+            <h1>Ivar</h1> 
+            <!-- Lager en knapp som tar deg tilbake til hovedsiden -->
+            <a href="index.html" class="button">Tilbake til hovedside</a>
+        </header>
+        <h1>Ivar Kaldheim (31år)</h1>
+        <img src="images/fiskIK.png"
+  width="576" 
+  height="568"
+  class="center"/>
+
+        <p>Student ved Universitetet i Agder, 1. år bachelor i IT og informasjonssystemer</p>
+        <br><br>
+        <p>ivark@uia.no</p>
+
+        <div style="position: relative;">
+            <img src="images/figurPyretIK.png" style="position: absolute; left: 60px; top: 120px;"/>
+        </div>
+
+    </div>
+
+
+    <!-- Lager et canvas element med id brett -->
+    <canvas id="brett" width="1400" height="600"></canvas>
+
+
+     <!-- Lager et SVG element med id svgBrett -->
+     <svg id="svgBrett" width="1400" height="450"></svg>
+
+
+    <script>
+        //Venter på at siden laster inn før den kjører koden
+        window.onload = function () {
+            const ctx = initCanvas('brett'); // Initialiserer canvaset
+            rectangle(ctx, 200, 400, 350, 200,  'solid', 'black'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
+            rectangle(ctx, 250, 400, 240, 200, 'solid', 'blue'); // Tegner en sirkel av sirkler
+            rectangle(ctx, 250, 450, 240, 100, 'solid', 'red')
+            circle(ctx, 320, 450, 100, 'solid', 'chartreuse')
+
+
+            const svgCanvas = document.getElementById('svgBrett');
+
+            // Draw using SVG functions
+            const rect1SVG = rectangleSVG(200, 200, 350, 200, 'solid','black');
+
+            const rect2SVG = rectangleSVG(250, 200, 240, 200, 'solid', 'blue');
+            const rect3SVG = rectangleSVG(250, 250, 240, 100, 'solid', 'red');
+            const circle1SVG = circleSVG(375, 300, 50,  'solid', 'chartreuse');
+
+            
+
+            // Append the SVG elements to the SVG canvas
+            svgCanvas.appendChild(rect1SVG);
+            svgCanvas.appendChild(rect2SVG);
+            svgCanvas.appendChild(rect3SVG);
+            svgCanvas.appendChild(circle1SVG);
+            }
+      </script>
+    <center>
+      <br><br><br><br>
+      <p>Pyret</p>
+      <br><br>
+  <a href="https://github.com/Ivark1/IS-114Prog/blob/main/Progoblig3.arr">Link til repository med pyret-kode</a>
+      <br><br>
+      <h2>Klimafotavtrykk</h2>
+      <img src ="images/klimafotavtrykkIK.png"/>
+   <div>
+        <br><br>
+<p>Kjører mye til og fra Oslo, bruker nok mer drivstoff en gjennomsnittet </p>
+</div>
+
+</center>
+</body>
+</html>
