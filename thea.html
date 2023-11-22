@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thea</title>
     <link rel="stylesheet" href="css/StyleMain.css">
-    <!-- Finner filen figures.js og kjører den -->
-    <script src="js/figures.js" defer></script>
     
     <!-- Lager en style som gjør at siden får en bakgrunnsfarge og at headeren får en annen farge -->
     <style> 
@@ -58,32 +56,11 @@
     <!-- Lager et SVG element med id svgBrett -->
     <svg id="svgBrett" width="1400" height="500"></svg>
 
-    <script>
-        //Venter på at siden laster inn før den kjører koden
-        window.onload = function () {
-            const ctx = initCanvas('brett'); // Initialiserer canvaset
-            rectangle(ctx, 240, 300, 180, 180, 'solid', 'rgb(191, 151, 154)');
-            circle(ctx, 335, 400, 80, 'outline', 'black');
-            circle(ctx, 240, 380, 100, 'solid', 'pink');
-            circle(ctx, 300, 300, 120, 'solid', 'rgb(235, 52, 113)');
-            const svgCanvas = document.getElementById('svgBrett');
+    <!-- Finner filen figures.js og kjører den -->
+    <script src="js/figures.js"></script>
+    <!-- Finner filen carl.js og kjører den -->
+    <script src="js/Thea.js"></script>
 
-
-            // Draw using SVG functions
-            const cfSVG =  rectangleSVG(240, 50, 180, 180, 'solid', 'rgb(191, 151, 154)');
-            const cf2SVG = circleSVG(335, 110, 50, 'outline', 'rbg(230, 140, 165');
-            const rectSVG = circleSVG(300, 175, 55, 'solid', 'pink');
-            const rect2SVG = circleSVG(360, 110, 60, 'solid', 'rgb(235, 52, 113)');
-            
-
-            // Append the SVG elements to the SVG canvas
-            svgCanvas.appendChild(cfSVG);
-            svgCanvas.appendChild(cf2SVG);
-            svgCanvas.appendChild(rectSVG);
-            svgCanvas.appendChild(rect2SVG);
-            
-        }
-    </script>
     <div class="container">
         <header>
             <br><br>
