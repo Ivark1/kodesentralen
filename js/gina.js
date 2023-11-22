@@ -11,17 +11,26 @@
     context.fillStyle = "#8B4513"; 
     context.fillRect(250, 430, 40, 40);
 
- 
- 
+ // Tegner med SVG
+const rect1GBSVG = rectangleSVG(250, 430, 40, 40, 'solid', 'brown');
+const rect2GBSVG = rectangleSVG(250, 50, 50, 20, 'solid', 'green');
+const rect3GBSVG = rectangleSVG(225, 70, 100, 30, 'solid', 'green');
+const rect4GBSVG = rectangleSVG(200, 100, 150, 40, 'solid', 'green');
+const rect5GBSVG = rectangleSVG(175, 140, 200, 50, 'solid', 'green');
+const rect6GBSVG = rectangleSVG(150, 190, 250, 60, 'solid', 'green');
+const rect7GBSVG = rectangleSVG(125, 250, 300, 80, 'solid', 'green');
+const rect8GBSVG = rectangleSVG(100, 300, 350, 100, 'solid', 'green');
    
-// Tegner med SVG
-    <rect x="250" y="430" width="40" height="40" fill="brown" />
-    <rect x="250" y="50" width="50" height="20" fill="green" />
-    <rect x="225" y="70" width="100" height="30" fill="green" />
-    <rect x="200" y="100" width="150" height="40" fill="green" />
-    <rect x="175" y="140" width="200" height="50" fill="green" />
-    <rect x="150" y="190" width="250" height="60" fill="green" />
-    <rect x="125" y="250" width="300" height="80" fill="green" />
-    <rect x="100" y="330" width="350" height="100" fill="green" />
+   
+    
+//Legger figurene i SVG-canvaset
+svg.Canvas.appenChild(rect1GBSVG);
+svg.Canvas.appenChild(rect2GBSVG);
+svg.Canvas.appenChild(rect3GBSVG);
+svg.Canvas.appenChild(rect4GBSVG);
+svg.Canvas.appenChild(rect5GBSVG);
+svg.Canvas.appenChild(rect6GBSVG);
+svg.Canvas.appenChild(rect7GBSVG);
+svg.Canvas.appenChild(rect8GBSVG);
     
 
