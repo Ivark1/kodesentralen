@@ -1,15 +1,12 @@
 
-    context.fillStyle = "#228B22"; 
-    context.fillRect(250, 50, 50, 20);
-    context.fillStyle = "#228B22"; 
-    context.fillRect(225, 70, 100, 30);
-    context.fillRect(200, 100, 150, 40);
-    context.fillRect(175, 140, 200, 50);
-    context.fillRect(150, 190, 250, 60);
-    context.fillRect(125, 250, 300, 80);
-    context.fillRect(100, 330, 350, 100);
-    context.fillStyle = "#8B4513"; 
-    context.fillRect(250, 430, 40, 40);
+rectangle(ctx, 250, 430, 40, 40, 'solid', 'brown');
+rectangle(ctx, 250, 50, 50, 20, 'solid', 'green');
+rectangle(ctx, 225, 70, 100, 30, 'solid', 'green');
+rectangle(ctx, 200, 100, 150, 40, 'solid', 'green');
+rectangle(ctx, 175, 140, 200, 50, 'solid', 'green');
+rectangle(ctx, 150, 190, 250, 60, 'solid', 'green');
+rectangle(ctx, 125, 250, 300, 80, 'solid', 'green');
+rectangle(ctx, 100, 330, 350, 100, 'solid', 'green');
 
  // Tegner med SVG
 const rect1GBSVG = rectangleSVG(250, 430, 40, 40, 'solid', 'brown');
