@@ -46,14 +46,14 @@
 	//Venter på at siden laster inn før den kjører koden
         window.onload = function () {
         	const ctx = initCanvas('brett'); // Initialiserer canvaset
-		rectangle(ctx, 100, 100, 75, 75, 'solid', 'green');
+		rectangle(ctx, 100, 100, 75, 75, 'solid', 'chartreuse');
         	rectangle(ctx, 50, 50, 75, 75, 'solid', 'red');
 		rectangle(ctx, 50, 50, 75, 75, 'solid', 'blue');
 			
             	const svgCanvas = document.getElementById('svgBrett');
 			
             	// Draw using SVG functions
-            	const rSVG = rectangleSVG(100, 100, 75, 75, 'solid', 'green');
+            	const rSVG = rectangleSVG(100, 100, 75, 75, 'solid', 'chartreuse');
             	const r2SVG = rectangleSVG(50, 50, 75, 75, 'solid', 'red');
             	const r3SVG = rectangleSVG(50, 50, 75, 75, 'solid', 'blue');
         
