@@ -38,30 +38,30 @@
         <p>Student ved Universitetet i Agder, 1. år bachelor i IT og informasjonssystemer</p>
         <br><br>
         <p>ivark@uia.no</p>
-
+        <p> Figur1 = pyret</p>
+            <p>Figur2 = Canvas</p>
+            <p>Figur3 = SVG </p>
         <div style="position: relative;">
             <img src="images/figurPyretIK.png" style="position: absolute; left: 60px; top: 120px;"/>
         </div>
 
     </div>
-
-
-    <!-- Lager et canvas element med id brett -->
-    <canvas id="brett" width="1400" height="600"></canvas>
+<!-- Lager et canvas element med id brett -->
+    <canvas id="brett" width="1000" height="600"></canvas> 
 
 
      <!-- Lager et SVG element med id svgBrett -->
-     <svg id="svgBrett" width="1400" height="450"></svg>
+     <svg id="svgBrett" width="1000" height="600"></svg>
 
 
     <script>
         //Venter på at siden laster inn før den kjører koden
         window.onload = function () {
             const ctx = initCanvas('brett'); // Initialiserer canvaset
-            rectangle(ctx, 200, 400, 350, 200,  'solid', 'black'); // Tegner en sirkel av sirkler, med radius 10, 60 sirkler og rød farge
-            rectangle(ctx, 250, 400, 240, 200, 'solid', 'blue'); // Tegner en sirkel av sirkler
-            rectangle(ctx, 250, 450, 240, 100, 'solid', 'red')
-            circle(ctx, 320, 450, 100, 'solid', 'chartreuse')
+            rectangle(ctx, 200, 400, 350, 200,  'solid', 'black'); // Tegner den største firkanten som danner svart bakgrunn
+            rectangle(ctx, 250, 400, 240, 200, 'solid', 'blue'); // Tegner en blå mindre firkant som mellomlegg
+            rectangle(ctx, 250, 450, 240, 100, 'solid', 'red'); // Tegner den minste røde firkanten
+            circle(ctx, 320, 450, 100, 'solid', 'chartreuse'); // Tegner grønn sirkel som ligger i midten av figuren
 
 
             const svgCanvas = document.getElementById('svgBrett');
