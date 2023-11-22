@@ -1,8 +1,8 @@
 
-rectangle(ctx, 240, 700, 180, 180, 'solid', 'rgb(191, 151, 154)');
-circle(ctx, 335, 800, 80, 'outline', 'black');
-circle(ctx, 240, 780, 100, 'solid', 'pink');
-circle(ctx, 300, 700, 120, 'solid', 'rgb(235, 52, 113)');
+rectangle(ctx, 240, 400, 180, 180, 'solid', 'rgb(191, 151, 154)');
+circle(ctx, 335, 500, 80, 'outline', 'black');
+circle(ctx, 240, 480, 100, 'solid', 'pink');
+circle(ctx, 300, 400, 120, 'solid', 'rgb(235, 52, 113)');
 
 // Draw using SVG functions
 const cfSVGTS =  rectangleSVG(240, 450, 180, 180, 'solid', 'rgb(191, 151, 154)');
