@@ -1,12 +1,12 @@
-rectangle(ctx, 150, 40, 75, 75, 'solid', 'chartreuse');
-        	rectangle(ctx, 185, 115, 75, 75, 'solid', 'blue');
-		rectangle(ctx, 110, 115, 75, 75, 'solid', 'red');
+rectangle(ctx, 450, 40, 75, 75, 'solid', 'chartreuse');
+        	rectangle(ctx, 485, 115, 75, 75, 'solid', 'blue');
+		rectangle(ctx, 410, 115, 75, 75, 'solid', 'red');
 			
 			
             	// Draw using SVG functions
-            	const rSVG = rectangleSVG(150, 40, 75, 75, 'solid', 'chartreuse');
-            	const r2SVG = rectangleSVG(185, 115, 75, 75, 'solid', 'blue');
-            	const r3SVG = rectangleSVG(110, 115, 75, 75, 'solid', 'red');
+            	const rSVG = rectangleSVG(450, 40, 75, 75, 'solid', 'chartreuse');
+            	const r2SVG = rectangleSVG(485, 115, 75, 75, 'solid', 'blue');
+            	const r3SVG = rectangleSVG(410, 115, 75, 75, 'solid', 'red');
         
 		
 		// Append the SVG elements to the SVG canvas
