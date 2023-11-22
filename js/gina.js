@@ -4,7 +4,7 @@
   <title>Enkelt juletre med Canvas API</title>
 </head>
 <body>
-  <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000;"></canvas>
+  <canvas id="JuletreAPI" width="500" height="500" style="border:1px solid #000;"></canvas>
 
   <script>
     var canvas = document.getElementById("myCanvas");
