@@ -30,11 +30,6 @@
             <a href="index.html" class="button">Tilbake til hovedside</a>
         </header>
         <h1>Ivar Kaldheim (31år)</h1>
-            <br><br>
-         <center>
-        <img src="images/fiskIK.png"
-             </center>
-             <br><br>
         <p>Student ved Universitetet i Agder, 1. år bachelor i IT og informasjonssystemer</p>
         <br><br>
         <p>ivark@uia.no</p>
@@ -46,9 +41,11 @@
     </div>
 
 
-
     <!-- Lager et canvas element med id brett -->
     <canvas id="brett" width="1400" height="650"></canvas>
+
+     <!-- Lager et SVG element med id svgBrett -->
+     <svg id="svgBrett" width="1400" height="400"></svg>
 
     <script>
         //Venter på at siden laster inn før den kjører koden
@@ -74,9 +71,7 @@
             svgCanvas.appendChild(rect2SVG);
             svgCanvas.appendChild(rect3SVG);
             svgCanvas.appendChild(circle1SVG);
-            
-        }
-        
+            }
       </script>
     <center>
       <br><br><br><br>
@@ -93,6 +88,3 @@
 </body>
 </html>
         </center>
-
-</body>
-</html>
