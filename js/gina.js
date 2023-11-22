@@ -14,7 +14,7 @@
  
  
    
-
+// Tegner med SVG
     <rect x="250" y="430" width="40" height="40" fill="brown" />
     <rect x="250" y="50" width="50" height="20" fill="green" />
     <rect x="225" y="70" width="100" height="30" fill="green" />
@@ -25,4 +25,3 @@
     <rect x="100" y="330" width="350" height="100" fill="green" />
     
 
-</svg>
