@@ -15,7 +15,7 @@ const rect2SVG = rectangleSVG(255, 55, 110, 110, 'outline', 'blue');
 const rect3SVG = rectangleSVG(250, 50, 120, 120, 'outline', 'blue');
 
 // Legger til figurene i SVG-canvaset
-svgCanvas.appendChild(cfSVG);
+svgCanvas.appendChild(cfSVG); // legger til figurene i svgCanvaset
 svgCanvas.appendChild(cf2SVG);
 svgCanvas.appendChild(ccSVG);
 svgCanvas.appendChild(rectSVG);
