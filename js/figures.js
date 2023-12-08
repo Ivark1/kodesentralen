@@ -9,13 +9,13 @@ const svgCanvas = document.getElementById('svgBrett');
 
 // Funksjon for å tegne en sirkel
 function circle(context, x, y, size, fillMode, color) {
-    const radius = size / 2;
+    const radius = size / 2;        
 
     context.fillStyle = color;
 
     if (fillMode === 'solid') {
         context.beginPath();
-        context.arc(x + radius, y + radius, radius, 0, 2 * Math.PI);
+        context.arc(x + radius, y + radius, radius, 0, 2 * Math.PI); 
         context.fill();
     } else if (fillMode === 'outline') {
         context.beginPath();
